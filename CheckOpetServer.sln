@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckOpetServer", "CheckOpetServer\CheckOpetServer.csproj", "{6E4BF8CF-C8B2-4844-A96E-5CE851CF0309}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartLogs", "ChartLogs\ChartLogs.csproj", "{869EB6EB-74CC-4B6F-80C2-1B3B0F2EC16F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6E4BF8CF-C8B2-4844-A96E-5CE851CF0309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E4BF8CF-C8B2-4844-A96E-5CE851CF0309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E4BF8CF-C8B2-4844-A96E-5CE851CF0309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{869EB6EB-74CC-4B6F-80C2-1B3B0F2EC16F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869EB6EB-74CC-4B6F-80C2-1B3B0F2EC16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869EB6EB-74CC-4B6F-80C2-1B3B0F2EC16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869EB6EB-74CC-4B6F-80C2-1B3B0F2EC16F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
