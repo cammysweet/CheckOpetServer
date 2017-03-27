@@ -54,6 +54,7 @@ namespace CheckOpetServer
             catch (Exception)
             {
                 WriteLog.SalvaLog("N");
+                throw;
             }
 
         } 
