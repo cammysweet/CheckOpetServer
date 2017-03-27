@@ -10,12 +10,14 @@ namespace CheckOpetServer
     [TestClass]
     public class AlunoOnlineTest
     {
+        #region Variáveis
         ChromeDriver chromedriver;
         private String chromedriverPath = (ConfigurationManager.AppSettings["chromedriverPath"]);
         private String urlAlunoOnline = (ConfigurationManager.AppSettings["urlAlunoOnline"]);
         private String urlEntrada = (ConfigurationManager.AppSettings["urlEntrada"]);
         private String login = (ConfigurationManager.AppSettings["login"]);
-        private String senha = (ConfigurationManager.AppSettings["senha"]);
+        private String senha = (ConfigurationManager.AppSettings["senha"]); 
+        #endregion
 
         #region arranging tests
         [TestInitialize]
@@ -35,6 +37,7 @@ namespace CheckOpetServer
 
         #endregion
 
+        #region Methods
         [TestMethod]
         public void AlunoOnlineTestMethod()
         {
@@ -43,7 +46,17 @@ namespace CheckOpetServer
             AjustSendKeys.SendKeysById("txtsenha_tac", senha, chromedriver);
             AjustClick.ClickById("cmdEnviar", chromedriver);
             var wait = new WebDriverWait(chromedriver, TimeSpan.FromSeconds(120));
-            wait.Until(ExpectedConditions.UrlContains(urlEntrada));
-        }
+            try
+            {
+                wait.Until(ExpectedConditions.UrlContains(urlEntrada));
+                WriteLog.SalvaLog("S");
+            }
+            catch (Exception)
+            {
+                WriteLog.SalvaLog("N");
+            }
+
+        } 
+        #endregion
     }
 }
