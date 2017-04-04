@@ -12,7 +12,7 @@ namespace CheckOpetServer
         {
             using (StreamWriter sw = File.AppendText(pathLog))
             {
-                sw.WriteLine("Login efetuado com sucesso? '" + result + "' " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss"));
+                sw.WriteLine("Login efetuado com sucesso?'" + result + "'-" + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss"));
             }
         }
     }
