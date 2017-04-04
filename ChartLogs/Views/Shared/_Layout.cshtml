@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
         google.charts.load('current', { 'packages': ['corechart', 'line'] });
+        google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-             ['Horários', 'Resultados'],
-             ['13',    'S'],
-             ['13,13',    'N']
+                [2, 'Resultados'],
+                [13, 'S'],
+                [14, 'N'],
+                [15, 'N']
             ]);
 
             var options = {
