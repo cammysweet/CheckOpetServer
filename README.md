@@ -1,5 +1,4 @@
 # CheckOpetServer
-Testa o login no aluno online da Opet
+Testa o login no aluno online da Opet.
 
-Exemplo de comando para rodar os testes (colocar o mstest.exe na pasta da dll (debug ou release): C:\CheckOpetServer> mstest /testcontainer:CheckOpetSe
-rver.dll /test:AlunoOnlineTestMethod
+Verificar funcionamento na descrição do release.
