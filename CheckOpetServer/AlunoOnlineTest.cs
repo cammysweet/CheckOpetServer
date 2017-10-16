@@ -16,7 +16,12 @@ namespace CheckOpetServer
         private String urlAlunoOnline = (ConfigurationManager.AppSettings["urlAlunoOnline"]);
         private String urlEntrada = (ConfigurationManager.AppSettings["urlEntrada"]);
         private String login = (ConfigurationManager.AppSettings["login"]);
-        private String senha = (ConfigurationManager.AppSettings["senha"]); 
+        private String senha = (ConfigurationManager.AppSettings["senha"]);
+
+        private String urlLogin = (ConfigurationManager.AppSettings["urlLogin"]);
+        private String LoginOs = (ConfigurationManager.AppSettings["loginOs"]);
+        private String SenhaOs = (ConfigurationManager.AppSettings["senhaOs"]);
+
         #endregion
 
         #region arranging tests
@@ -58,6 +63,32 @@ namespace CheckOpetServer
             }
 
         } 
+        [TestMethod] 
+        public void OpenSubtitleTeste()
+        {
+            chromedriver.Navigate().GoToUrl(urlLogin);
+            AjustClick.ClickByClassName("bt-dwl", chromedriver);
+            AjustClick.ClickByClassName("disable_ad", chromedriver);
+            AjustSendKeys.SendKeysByName("user", LoginOs, chromedriver);
+            AjustSendKeys.SendKeysById("password", SenhaOs, chromedriver);
+            AjustClick.ClickByXPath("//*[@id=\"loginform\"]/table/tbody/tr[4]/td/input", chromedriver);
+            var wait = new WebDriverWait(chromedriver, TimeSpan.FromSeconds(60));
+            try
+            {
+                //wait.Until(ExpectedConditions.ElementIsVisible(d => d.FindElement(By.XPath("//div[@id='timeLeft']")("//*[@id=\"logindetail\"]/a[2]"));
+                WriteLog.SalvaLog("S");
+            }
+            catch (Exception)
+            {
+                WriteLog.SalvaLog("N");
+              
+                throw;
+            }
+
+        }
+
         #endregion
+
+
     }
 }
